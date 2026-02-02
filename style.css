@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: #222;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-photo {
+  width: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #444;
+}
+
+.about, .services, .contact {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about h2, .services h2, .contact h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+footer {
+  text-align:center;
+  padding: 15px;
+  background: #f1f1f1;
+  font-size: 14px;
+}
