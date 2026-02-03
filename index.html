@@ -2,54 +2,148 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Тетяна Караканова — адвокат у Дніпрі</title>
-
-  <meta name="description" content="Тетяна Караканова — адвокат у Дніпрі. Юридичні консультації, представництво в суді, правова допомога.">
-  <meta name="keywords" content="адвокат Дніпро, юрист Дніпро, правова допомога, адвокат Караканова">
-
-  <meta name="robots" content="index, follow">
-
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гайд: Запуск сайту Караканової на GitHub Pages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #fefefe;
+      color: #222;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+    }
+    h1 {
+      font-size: 28px;
+      border-bottom: 2px solid #4caf50;
+      padding-bottom: 10px;
+    }
+    h2 {
+      font-size: 22px;
+      color: #4caf50;
+      margin-top: 30px;
+    }
+    h3 {
+      font-size: 18px;
+      color: #333;
+    }
+    p {
+      margin: 10px 0;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    blockquote {
+      border-left: 4px solid #4caf50;
+      padding-left: 10px;
+      color: #555;
+      margin: 10px 0;
+      background: #f9f9f9;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-left: 4px solid #4caf50;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+      font-size: 14px;
+      color: #777;
+      text-align: center;
+    }
+  </style>
 </head>
-
 <body>
 
-<header class="hero">
-  <img src="photo.jpg" alt="Тетяна Караканова" class="hero-photo">
-  <h1>Тетяна Караканова</h1>
-  <p class="subtitle">Адвокат у Дніпрі</p>
-</header>
+<h1>🟢 Гайд: Запуск сайту адвоката Караканової на GitHub Pages</h1>
 
-<section class="about">
-  <h2>Про мене</h2>
-  <p>
-    Допомагаємо розв'язувати правові питання та захистити ваші інтереси. 
-    Юридичні Послуги. Консультації. Представництво в суді. 
-    Ваші права — наш пріоритет.
-  </p>
-</section>
+<h2>1️⃣ Підготовка репозиторію</h2>
+<div class="step">
+  <p>Переконайся, що у репозиторії є файли:</p>
+  <pre>/index.html
+/style.css
+/photo.jpg</pre>
+  <p>Якщо є пробіли у назвах файлів (наприклад <code>index. html</code>) → перейменуй на <code>index.html</code>.</p>
+</div>
 
-<section class="services">
-  <h2>Юридичні Послуги</h2>
+<h2>2️⃣ Увімкнення GitHub Pages</h2>
+<div class="step">
   <ul>
-    <li>Юридичні консультації</li>
-    <li>Представництво в суді</li>
-    <li>Допомога у спорах</li>
-    <li>Аналіз документів</li>
+    <li>Відкрий репозиторій на GitHub.</li>
+    <li>Перейди в <strong>Settings → Pages</strong>.</li>
+    <li>У розділі <strong>Source</strong> обери:
+      <ul>
+        <li><strong>Branch:</strong> main</li>
+        <li><strong>Folder:</strong> /root</li>
+      </ul>
+    </li>
+    <li>Натисни <strong>Save</strong>.</li>
   </ul>
-</section>
+  <blockquote>Після цього GitHub автоматично згенерує URL для твого сайту.</blockquote>
+</div>
 
-<section class="contact">
-  <h2>Контакти</h2>
-  <p>📞 Телефон: +380 ___ ___ ___</p>
-  <p>✉ Email: your@email.com</p>
-</section>
+<h2>3️⃣ Отримання посилання на сайт</h2>
+<div class="step">
+  <p>URL буде приблизно таким:</p>
+  <pre>https://nataliotor.github.io/karakanova/</pre>
+  <p>Відкривши його, ти побачиш головну сторінку (<code>index.html</code>).</p>
+</div>
+
+<h2>4️⃣ Перевірка роботи</h2>
+<div class="step">
+  <ul>
+    <li>Відкрий URL у браузері → сайт має відображатися.</li>
+    <li>При змінах у <code>index.html</code> або <code>style.css</code>:
+      <ol>
+        <li>Зроби коміт і пуш на GitHub</li>
+        <li>Сторінка автоматично оновиться</li>
+      </ol>
+    </li>
+  </ul>
+</div>
+
+<h2>5️⃣ Поради по стилю та контактам</h2>
+<div class="step">
+  <p>Для контактів краще використовувати посилання:</p>
+  <pre>
+&lt;p&gt;📞 Телефон: &lt;a href="tel:+380123456789"&gt;+380 123 456 789&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;✉ Email: &lt;a href="mailto:your@email.com"&gt;your@email.com&lt;/a&gt;&lt;/p&gt;
+  </pre>
+  <p>Для списків послуг додаємо стилі в <code>style.css</code>:</p>
+  <pre>
+.services ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+  </pre>
+</div>
 
 <footer>
-  <p>© 2026 Тетяна Караканова. Всі права захищені.</p>
+  © 2026 Тетяна Караканова. Гайд створено для GitHub Pages.
 </footer>
 
 </body>
 </html>
-
-
