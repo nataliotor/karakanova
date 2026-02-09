@@ -8,7 +8,7 @@
     <meta name="keywords" content="Караканова Тетяна, адвокат Умань, адвокат Черкаси, юридичні послуги, консультація адвоката">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Караканова Тетяна Володимирівна - Адвокат">
-    <meta property="og:description" content="Професійний адвокат Дніпропетровської області. Консультації, представництво в суді.">
+    <meta property="og:description" content="Професійний адвокат Дніпропетровській області. Консультації, представництво в суді.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://yourusername.github.io/karakanova/">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+3:wght@400&display=swap" rel="stylesheet">
@@ -55,8 +55,7 @@
         }
         .card-accent::before {
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: url('https://images.unsplash.com/photo-1618567204744-b1a4e6f12118?w=1200&auto=format') center/cover;
-            opacity: 0.3;
+            background-size: cover; background-position: center; opacity: 0.3;
         }
         .card-body {
             padding: 3.5rem; position: relative; display: flex; flex-direction: column;
@@ -71,24 +70,17 @@
         h3, h4 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
         p { margin-bottom: 1.25rem; }
         .smart-layout {
-            display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; padding: 2rem;
+            display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; padding: 2rem 0;
         }
         .grid-col-6 { grid-column: span 6; }
-        .grid-col-12 { grid-column: span 12; }
-        .timeline-item {
-            position: relative; padding-left: 2.5rem; margin-bottom: 2rem;
+        .service-item {
+            background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.08); margin-bottom: 1.5rem;
+            transition: var(--transition);
         }
-        .timeline-item::before {
-            content: ''; position: absolute; left: 1rem; top: 0; bottom: -2rem;
-            width: 2px; background: linear-gradient(to bottom, var(--accent), transparent);
-        }
-        .list-styled { padding-left: 1.5rem; }
-        .list-styled li {
-            position: relative; padding: 0.75rem 0; margin-bottom: 0.5rem;
-        }
-        .list-styled li::before {
-            content: '▸'; position: absolute; left: -1.5rem; color: var(--accent);
-            font-weight: bold; font-size: 1.1em;
+        .service-item:hover {
+            background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15);
+            transform: translateY(-4px);
         }
         .contact-box {
             background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px;
@@ -108,7 +100,10 @@
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .card-wrapper { animation: fadeInUp 0.8s ease-out forwards; }
+        .card-wrapper { 
+            animation: fadeInUp 0.8s ease-out forwards; 
+            opacity: 0; transform: translateY(30px);
+        }
         .card-wrapper:nth-child(2) { animation-delay: 0.1s; }
         .card-wrapper:nth-child(3) { animation-delay: 0.2s; }
     </style>
@@ -124,67 +119,42 @@
         <!-- Перша картка: Головна -->
         <div class="card-wrapper">
             <div class="card-layout">
-                <div class="card-accent"></div>
+                <div class="card-accent" style="background-image: url('https://images.unsplash.com/photo-1618567204744-b1a4e6f12118?w=1200&auto=format')"></div>
                 <div class="card-body">
                     <h1>Караканова Тетяна Володимирівна</h1>
                     <p>Адвокат. Свідоцтво №001215 від 14.10.2019</p>
                     <div class="contact-box">
                         <p><strong>📞 Телефон:</strong> <a href="tel:+380994493359">+380 99 44 93 359</a></p>
                         <p><strong>✉️ Email:</strong> <a href="mailto:3223618261@i.ua">3223618261@i.ua</a></p>
-                        <p><strong>📍 Адреса:</strong> Черкаська обл., Уманський р-н., смт Буки, вул. Зарічна, 41</p>
+        
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Друга картка: Послуги -->
+        <!-- Друга картка: Юридичні послуги (Точно як просили) -->
         <div class="card-wrapper">
             <div class="card-layout">
-                <div class="card-accent" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800')"></div>
+                <div class="card-accent" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format')"></div>
                 <div class="card-body">
-                    <h2>Юридичні послуги</h2>
+                    <h2>Юридичні Послуги</h2>
                     <div class="smart-layout">
                         <div class="grid-col-6">
-                            <h3>Консультації</h3>
-                            <ul class="list-styled">
-                                <li>Цивільне право</li>
-                                <li>Сімейні спори</li>
-                                <li>Житлові питання</li>
-                                <li>Спадщина</li>
-                            </ul>
+                            <div class="service-item">
+                                <h3>Консультації</h3>
+                                <p>Допомагаю розібратися з правовими питаннями, перевіряю документи та планую ваші дії.</p>
+                            </div>
                         </div>
                         <div class="grid-col-6">
-                            <h3>Представництво</h3>
-                            <ul class="list-styled">
-                                <li>Суд першої інстанції</li>
-                                <li>Апеляції та касації</li>
-                                <li>Органи влади</li>
-                                <li>Нотаріус</li>
-                            </ul>
+                            <div class="service-item">
+                                <h3>Представництво в суді</h3>
+                                <p>Захищаю ваші інтереси в суді та відстоюю ваші права.</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Третя картка: Таймлайн -->
-        <div class="card-wrapper">
-            <div class="card-layout">
-                <div class="card-body" style="grid-column: 1 / -1;">
-                    <h2>Досвід роботи</h2>
-                    <div class="smart-layout">
                         <div class="grid-col-12">
-                            <div class="timeline-item">
-                                <h4>Спеціалізація</h4>
-                                <p>Цивільні, сімейні, житлові спори. Багаторічний досвід у судах Черкаської області.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h4>Членство</h4>
-                                <p>Членкиня адвокатського об'єднання. Реєстр адвокатів України.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h4>Гарантії</h4>
-                                <p>Конфіденційність. Індивідуальний підхід. Прозорі умови.</p>
+                            <div class="service-item">
+                                <h3>Юридична підтримка</h3>
+                                <p>Допомагаю вашому бізнесу, працюю з договорами та представляю вас в державних установах і інших організаціях.</p>
                             </div>
                         </div>
                     </div>
@@ -192,13 +162,13 @@
             </div>
         </div>
 
-        <!-- Четверта картка: Контакти -->
+        <!-- Третя картка: Контакти -->
         <div class="card-wrapper">
             <div class="card-layout">
-                <div class="card-accent" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800')"></div>
+                <div class="card-accent" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format')"></div>
                 <div class="card-body">
                     <h2>Зв'яжіться зі мною</h2>
-                    <p>Безкоштовна первинна консультація. Працюю в Умані, Черкасах та Черкаській області.</p>
+                
                     <div class="contact-box">
                         <h3>Готові вирішити ваше питання?</h3>
                         <p><strong>Зателефонуйте:</strong> <a href="tel:+380994493359">+380 99 44 93 359</a></p>
@@ -210,14 +180,6 @@
     </div>
 
     <script>
-        // Плавний скрол та мікроанімації
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
         // Intersection Observer для анімацій
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -228,14 +190,10 @@
             });
         });
 
-        document.querySelectorAll('.card-wrapper').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
+        document.querySelectorAll('.card-wrapper').forEach((el, index) => {
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
     </script>
 </body>
 </html>
-
-
