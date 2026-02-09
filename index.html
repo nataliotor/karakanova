@@ -3,142 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Караканова Тетяна Володимирівна - Адвокат | Черкаська область | Консультації</title>
-    <meta name="description" content="Адвокат Караканова Тетяна Володимирівна. Свідоцтво №001215 від 14.10.2019. Телефон: +380 99 44 93 359. Юридичні послуги в Умані, Черкасах. Захист прав, консультації, представництво в суді.">
-    <meta name="keywords" content="адвокат Караканова, Тетяна Караканова адвокат, адвокат Умань, адвокат Черкаси, юридичні послуги Умань">
+    <title>Караканова Тетяна Володимирівна - Адвокат | Черкаська область</title>
+    <meta name="description" content="Адвокат Караканова Тетяна Володимирівна. Свідоцтво №001215. Тел: +380 99 44 93 359. Юридичні консультації, захист у судах Умань, Черкаси.">
+    <meta name="keywords" content="Караканова Тетяна, адвокат Умань, адвокат Черкаси, юридичні послуги, консультація адвоката">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Караканова Тетяна Володимирівна - Адвокат">
-    <meta property="og:description" content="Професійні юридичні послуги. Консультації адвоката в Черкаській області.">
-    <meta property="og:image" content="https://yourdomain.com/images/karakanova-photo.jpg">
+    <meta property="og:description" content="Професійний адвокат Черкаської області. Консультації, представництво в суді.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://yourusername.github.io/karakanova/">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+3:wght@400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #FFFFFF;
-            --bg-color: #111213;
-            --text-color: #E2E6E9;
-            --accent-color: #FFFFFF;
-            --border-radius: 0.5rem;
-            --shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --bg-primary: #111213;
+            --bg-secondary: #181A1B;
+            --bg-card: #1e1f20;
+            --text-primary: #FFFFFF;
+            --text-secondary: #E2E6E9;
+            --accent: #FFFFFF;
+            --border-radius: 12px;
+            --shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            font-family: 'Source Sans 3', sans-serif; 
-            background: var(--bg-color); 
-            color: var(--text-color); 
-            line-height: 1.6; 
-            padding: 2rem; 
-            max-width: 1200px; 
-            margin: 0 auto;
+            font-family: 'Source Sans 3', -apple-system, sans-serif; 
+            background: var(--bg-primary); 
+            color: var(--text-secondary); 
+            line-height: 1.7; 
+            overflow-x: hidden;
         }
-        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-color); margin-bottom: 1rem; }
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; }
-        h3, h4 { font-size: 1.5rem; }
-        .container { display: grid; gap: 2rem; }
-        .hero { 
-            background: linear-gradient(135deg, #181A1B, #272525); 
-            padding: 3rem; 
-            border-radius: var(--border-radius); 
-            text-align: center; 
-            box-shadow: var(--shadow);
+        .doc-container {
+            max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem;
         }
-        .contacts { 
-            background: #1e1f20; 
-            padding: 2rem; 
-            border-radius: var(--border-radius); 
-            display: flex; 
-            flex-direction: column; 
-            gap: 1rem; 
-            font-size: 1.2rem;
+        .navbar { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 1.5rem 0; margin-bottom: 3rem;
         }
-        .contacts a { color: var(--accent-color); text-decoration: none; font-weight: bold; }
-        .contacts a:hover { text-decoration: underline; }
-        .card { 
-            background: #111213; 
-            padding: 2rem; 
-            border-radius: var(--border-radius); 
-            box-shadow: var(--shadow);
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
+        .card-wrapper {
+            position: relative; margin-bottom: 3rem; background: var(--bg-card);
+            border-radius: var(--border-radius); box-shadow: var(--shadow);
+            overflow: hidden; transition: var(--transition);
         }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        ul { list-style: none; padding-left: 0; }
-        ul li { padding: 0.5rem 0; position: relative; padding-left: 1.5rem; }
-        ul li::before { content: '▶'; color: var(--accent-color); position: absolute; left: 0; }
-        .image-placeholder { 
-            background: #28292a; 
-            height: 200px; 
-            border-radius: 0.5rem; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            margin: 1rem 0;
+        .card-wrapper:hover { transform: translateY(-8px); box-shadow: 0 35px 60px -15px rgba(0,0,0,0.3); }
+        .card-layout {
+            display: grid; grid-template-columns: 37.5% 62.5%; min-height: 24rem; gap: 0;
         }
-        footer { text-align: center; margin-top: 3rem; padding: 1rem; color: #888; }
-        @media (max-width: 768px) { body { padding: 1rem; } h1 { font-size: 2rem; } }
+        .card-accent {
+            position: relative; background: linear-gradient(135deg, var(--bg-secondary), #272525);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .card-accent::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: url('https://images.unsplash.com/photo-1618567204744-b1a4e6f12118?w=1200&auto=format') center/cover;
+            opacity: 0.3;
+        }
+        .card-body {
+            padding: 3.5rem; position: relative; display: flex; flex-direction: column;
+            justify-content: center;
+        }
+        h1, h2, h3, h4 { 
+            font-family: 'Montserrat', sans-serif; font-weight: 700; 
+            color: var(--text-primary); line-height: 1.2; margin-bottom: 1.5rem;
+        }
+        h1 { font-size: clamp(2rem, 5vw, 3rem); }
+        h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+        h3, h4 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+        p { margin-bottom: 1.25rem; }
+        .smart-layout {
+            display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; padding: 2rem;
+        }
+        .grid-col-6 { grid-column: span 6; }
+        .grid-col-12 { grid-column: span 12; }
+        .timeline-item {
+            position: relative; padding-left: 2.5rem; margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: ''; position: absolute; left: 1rem; top: 0; bottom: -2rem;
+            width: 2px; background: linear-gradient(to bottom, var(--accent), transparent);
+        }
+        .list-styled { padding-left: 1.5rem; }
+        .list-styled li {
+            position: relative; padding: 0.75rem 0; margin-bottom: 0.5rem;
+        }
+        .list-styled li::before {
+            content: '▸'; position: absolute; left: -1.5rem; color: var(--accent);
+            font-weight: bold; font-size: 1.1em;
+        }
+        .contact-box {
+            background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .contact-box a { 
+            color: var(--accent); font-weight: 600; text-decoration: none;
+            transition: var(--transition);
+        }
+        .contact-box a:hover { color: #e6e6e6; text-decoration: underline; }
+        @media (max-width: 768px) {
+            .card-layout { grid-template-columns: 1fr; }
+            .card-accent { min-height: 12rem; }
+            .smart-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-wrapper { animation: fadeInUp 0.8s ease-out forwards; }
+        .card-wrapper:nth-child(2) { animation-delay: 0.1s; }
+        .card-wrapper:nth-child(3) { animation-delay: 0.2s; }
     </style>
 </head>
 <body>
-    <header class="hero">
-        <h1>Караканова Тетяна Володимирівна</h1>
-        <p>Адвокат. Свідоцтво №001215 від 14.10.2019. Черкаська область.</p>
-    </header>
+    <div class="doc-container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">Караканова Т.В.</div>
+            <div>Адвокат Черкаської області</div>
+        </nav>
 
-    <div class="container">
-        <section class="contacts card">
-            <h2>Контактна інформація</h2>
-            <p><strong>Телефон:</strong> <a href="tel:+380994493359">+380 99 44 93 359</a></p>
-            <p><strong>Email:</strong> <a href="mailto:karakanova@3223618261i.ua">karakanova@3223618261i.ua</a></p>
-            <p><strong>Адреса:</strong> Черкаська обл., Уманський р-н., смт Буки, вул. Зарічна, 41</p>
-            <p><strong>Сайт:</strong> <a href="https://aabastion.com.ua/karakanova-tetyana-volodimirivna/">aabastion.com.ua</a></p> [web:20]
-        </section>
-
-        <section class="card">
-            <h2>Послуги адвоката</h2>
-            <div class="grid">
-                <div>
-                    <h3>Консультації</h3>
-                    <ul>
-                        <li>Юридичні консультації з цивільного права</li>
-                        <li>Сімейне право: розлучення, аліменти</li>
-                        <li>Житлові спори та спадщина</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Представництво</h3>
-                    <ul>
-                        <li>Захист в суді першої інстанції</li>
-                        <li>Апеляційні та касаційні скарги</li>
-                        <li>Представництво в органах влади</li>
-                    </ul>
+        <!-- Перша картка: Головна -->
+        <div class="card-wrapper">
+            <div class="card-layout">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <h1>Караканова Тетяна Володимирівна</h1>
+                    <p>Адвокат. Свідоцтво №001215 від 14.10.2019</p>
+                    <div class="contact-box">
+                        <p><strong>📞 Телефон:</strong> <a href="tel:+380994493359">+380 99 44 93 359</a></p>
+                        <p><strong>✉️ Email:</strong> <a href="mailto:karakanova@3223618261i.ua">karakanova@3223618261i.ua</a></p>
+                        <p><strong>📍 Адреса:</strong> Черкаська обл., Уманський р-н., смт Буки, вул. Зарічна, 41</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="card">
-            <h2>Досвід роботи</h2>
-            <ul>
-                <li>Багаторічний досвід представництва інтересів клієнтів у судах Черкаської області</li>
-                <li>Спеціалізація на цивільних, сімейних та житлових спорах</li>
-                <li>Членкиня адвокатського об'єднання</li>
-                <li>Реєстр адвокатів України</li>
-            </ul>
-            <div class="image-placeholder">Фото адвоката (замініть на реальне з alt="Караканова Тетяна Володимирівна адвокат")</div>
-        </section>
+        <!-- Друга картка: Послуги -->
+        <div class="card-wrapper">
+            <div class="card-layout">
+                <div class="card-accent" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800')"></div>
+                <div class="card-body">
+                    <h2>Юридичні послуги</h2>
+                    <div class="smart-layout">
+                        <div class="grid-col-6">
+                            <h3>Консультації</h3>
+                            <ul class="list-styled">
+                                <li>Цивільне право</li>
+                                <li>Сімейні спори</li>
+                                <li>Житлові питання</li>
+                                <li>Спадщина</li>
+                            </ul>
+                        </div>
+                        <div class="grid-col-6">
+                            <h3>Представництво</h3>
+                            <ul class="list-styled">
+                                <li>Суд першої інстанції</li>
+                                <li>Апеляції та касації</li>
+                                <li>Органи влади</li>
+                                <li>Нотаріус</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <section class="card">
-            <h2>Чому обирають мене?</h2>
-            <ul>
-                <li>Індивідуальний підхід до кожного клієнта</li>
-                <li>Прозорі умови співпраці</li>
-                <li>Гарантія конфіденційності</li>
-                <li>Доступні ціни на юридичні послуги</li>
-            </ul>
-        </section>
+        <!-- Третя картка: Таймлайн -->
+        <div class="card-wrapper">
+            <div class="card-layout">
+                <div class="card-body" style="grid-column: 1 / -1;">
+                    <h2>Досвід роботи</h2>
+                    <div class="smart-layout">
+                        <div class="grid-col-12">
+                            <div class="timeline-item">
+                                <h4>Спеціалізація</h4>
+                                <p>Цивільні, сімейні, житлові спори. Багаторічний досвід у судах Черкаської області.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>Членство</h4>
+                                <p>Членкиня адвокатського об'єднання. Реєстр адвокатів України.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>Гарантії</h4>
+                                <p>Конфіденційність. Індивідуальний підхід. Прозорі умови.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Четверта картка: Контакти -->
+        <div class="card-wrapper">
+            <div class="card-layout">
+                <div class="card-accent" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800')"></div>
+                <div class="card-body">
+                    <h2>Зв'яжіться зі мною</h2>
+                    <p>Безкоштовна первинна консультація. Працюю в Умані, Черкасах та Черкаській області.</p>
+                    <div class="contact-box">
+                        <h3>Готові вирішити ваше питання?</h3>
+                        <p><strong>Зателефонуйте:</strong> <a href="tel:+380994493359">+380 99 44 93 359</a></p>
+                        <p>Або напишіть на email для детального обговорення.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Караканова Тетяна Володимирівна. Всі права захищено. Розроблено для GitHub Pages.</p>
-    </footer>
+    <script>
+        // Плавний скрол та мікроанімації
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Intersection Observer для анімацій
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.card-wrapper').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
