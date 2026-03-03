@@ -9,47 +9,144 @@
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="canonical" href="https://advokat-karakanova-urist.cx.ua/">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --bg-dark: #0f1113; --bg-card: #1a1c1e; --accent: #d4af37; --text-main: #ffffff; --text-muted: #a0a8b0; --border: rgba(255, 255, 255, 0.1); }
+        :root { 
+            --bg-dark: #0f1113; 
+            --bg-card: #1a1c1e; 
+            --accent: #d4af37; 
+            --text-main: #ffffff; 
+            --text-muted: #a0a8b0; 
+            --border: rgba(255, 255, 255, 0.1); 
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Source Sans 3', sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
+        
+        body { 
+            font-family: 'Source Sans 3', sans-serif; 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            line-height: 1.6; 
+            overflow-x: hidden;
+        }
+
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        header { padding: 40px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
-        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; }
+
+        header { 
+            padding: 40px 0; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid var(--border); 
+        }
+
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }
         .status-badge { font-size: 0.9rem; color: var(--accent); text-transform: uppercase; font-weight: 600; }
-        .hero { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; padding: 80px 0; }
-        .hero-image-container { border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; background: #222; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+        .hero { 
+            display: grid; 
+            grid-template-columns: 1fr 1.2fr; 
+            gap: 60px; 
+            align-items: center; 
+            padding: 80px 0; 
+        }
+
+        .hero-image-container { 
+            border-radius: 20px; 
+            overflow: hidden; 
+            aspect-ratio: 3/4; 
+            background: #222; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+        }
+
         .hero-image-container img { width: 100%; height: 100%; object-fit: cover; }
-        .hero-content h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.3rem, 5vw, 3.5rem); margin-bottom: 20px; }
+        .hero-content h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.3rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 20px; }
         .subtitle { font-size: 1.2rem; color: var(--accent); margin-bottom: 30px; }
+
         .info-card { background: var(--bg-card); padding: 30px; border-radius: 15px; border: 1px solid var(--border); margin-bottom: 30px; }
+        .info-card p { margin-bottom: 10px; color: var(--text-muted); }
+        .info-card strong { color: var(--text-main); }
+
         .section-title { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; margin: 60px 0 40px; text-align: center; color: var(--accent); }
-        .services-list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 80px; }
-        .service-card { background: var(--bg-card); padding: 30px; border-radius: 20px; border: 1px solid var(--border); }
-        .service-card h3 { color: var(--accent); margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-        .service-card ul { list-style: none; margin-top: 15px; }
+
+        /* Нова структура для розміщення картинки поруч із послугами */
+        .services-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 30px;
+            margin-bottom: 80px;
+            align-items: start;
+        }
+
+        .services-grid-inner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card { 
+            background: var(--bg-card); 
+            padding: 25px; 
+            border-radius: 20px; 
+            border: 1px solid var(--border); 
+        }
+
+        .service-card h3 { color: var(--accent); margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; font-family: 'Montserrat', sans-serif; }
+        .service-card ul { list-style: none; }
         .service-card ul li { position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 0.95rem; color: var(--text-muted); }
         .service-card ul li::before { content: "•"; position: absolute; left: 0; color: var(--accent); }
-        .cta-section { background: linear-gradient(145deg, #1e2124, #141618); padding: 60px 20px; border-radius: 30px; text-align: center; margin-bottom: 80px; border: 1px solid var(--border); }
+
+        /* Контейнер для фото праворуч */
+        .side-image-container {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 500px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .side-image-container img { width: 100%; height: 100%; object-fit: cover; }
+
+        .cta-section { 
+            background: linear-gradient(145deg, #1e2124, #141618); 
+            padding: 60px 20px; 
+            border-radius: 30px; 
+            text-align: center; 
+            margin-bottom: 80px; 
+            border: 1px solid var(--border); 
+        }
+
         .btn-contact { display: inline-block; background: var(--accent); color: #000; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; margin: 10px; font-size: 1.1rem; }
         .messenger-btns { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .btn-msgr { padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; color: #fff; }
         .viber { background: #7360f2; }
         .telegram { background: #0088cc; }
-        .email-link { display: block; margin-top: 30px; color: var(--text-muted); text-decoration: none; transition: 0.3s; }
-        .email-link:hover { color: var(--accent); }
+        .email-link { display: block; margin-top: 30px; color: var(--text-muted); text-decoration: none; font-weight: 400; }
+
         footer { text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--border); font-size: 0.8rem; }
-        @media (max-width: 900px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-image-container { max-width: 400px; margin: 0 auto; } }
+
+        /* Мобільна адаптація */
+        @media (max-width: 1000px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero-image-container { max-width: 400px; margin: 0 auto; }
+            .services-layout { grid-template-columns: 1fr; }
+            .side-image-container { display: none; } /* Ховаємо бічну картинку на телефонах */
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
         <header>
             <div class="logo">КАРАКАНОВА Т.В.</div>
             <div class="status-badge">Адвокат Дніпропетровської області</div>
         </header>
+
         <section class="hero">
-            <div class="hero-image-container"><img src="karakanova-photo.JPG" alt="Адвокат Караканова Тетяна"></div>
+            <div class="hero-image-container">
+                <img src="karakanova-photo.JPG" alt="Адвокат Караканова Тетяна Володимирівна">
+            </div>
             <div class="hero-content">
                 <h1>Караканова<br>Тетяна Володимирівна</h1>
                 <p class="subtitle">Професійний захист ваших прав та інтересів</p>
@@ -61,16 +158,63 @@
                 <a href="tel:+380953905370" class="btn-contact">Зателефонувати фахівцю</a>
             </div>
         </section>
-        <h2 class="section-title">У чому я допоможу</h2>
-        <div class="services-list-grid">
-            <div class="service-card"><h3>Консультації та Майнові спори</h3><ul><li>Повернення на роботу</li><li>Стягнення зарплати</li><li>Скасування боргів</li><li>Відшкодування після ДТП</li></ul></div>
-            <div class="service-card"><h3>Сімейні питання</h3><ul><li>Розлучення та розподіл майна</li><li>Стягнення аліментів</li><li>Місце проживання дитини</li><li>Оскарження батьківства</li></ul></div>
-            <div class="service-card"><h3>Супровід бізнесу</h3><ul><li>Оскарження рішень Податкової</li><li>Спори з Пенсійним фондом</li><li>Допомога підприємцям</li></ul></div>
-            <div class="service-card"><h3>Адмінсправи</h3><ul><li>Захист за ст. 130 КУпАП</li><li>Порушення ПДР</li><li>Представництво в судах</li></ul></div>
-            <div class="service-card"><h3>Питання спадщини</h3><ul><li>Родинні зв'язки</li><li>Відновлення термінів</li><li>Оформлення власності</li></ul></div>
+
+        <h2 class="section-title">Напрямки діяльності</h2>
+
+        <div class="services-layout">
+            <div class="services-grid-inner">
+                <div class="service-card">
+                    <h3>Майнові спори</h3>
+                    <ul>
+                        <li>Повернення на роботу</li>
+                        <li>Стягнення зарплати</li>
+                        <li>Скасування боргів</li>
+                        <li>Відшкодування після ДТП</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Сімейні справи</h3>
+                    <ul>
+                        <li>Розлучення та аліменти</li>
+                        <li>Розподіл спільного майна</li>
+                        <li>Місце проживання дитини</li>
+                        <li>Позбавлення батьківських прав</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Супровід бізнесу</h3>
+                    <ul>
+                        <li>Оскарження рішень Податкової</li>
+                        <li>Спори з Пенсійним фондом</li>
+                        <li>Правовий аудит договорів</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Адмінсправи</h3>
+                    <ul>
+                        <li>Захист за ст. 130 КУпАП</li>
+                        <li>Порушення правил ПДР</li>
+                        <li>Оскарження протоколів</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Спадщина</h3>
+                    <ul>
+                        <li>Родинні зв'язки в суді</li>
+                        <li>Відновлення термінів</li>
+                        <li>Оформлення документів</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="side-image-container">
+                <img src="services-side.jpg" alt="Юридичні послуги">
+            </div>
         </div>
+
         <section class="cta-section">
-            <h2>Зв'язатися зі мною</h2>
+            <h2>Потрібна консультація?</h2>
+            <p>Ви можете зателефонувати або написати у месенджери:</p>
             <a href="tel:+380953905370" class="btn-contact">+38 095 390 53 70</a>
             <div class="messenger-btns">
                 <a href="viber://chat?number=%2B380953905370" class="btn-msgr viber">Viber</a>
@@ -78,7 +222,11 @@
             </div>
             <a href="mailto:3223618261@i.ua" class="email-link">3223618261@i.ua</a>
         </section>
-        <footer>&copy; 2026 Адвокат Караканова Т.В. Всі права захищені.</footer>
+
+        <footer>
+            &copy; 2026 Адвокат Караканова Т.В. Всі права захищені.
+        </footer>
     </div>
+
 </body>
 </html>
