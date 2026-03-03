@@ -26,7 +26,6 @@
             --text-main: #ffffff;
             --text-muted: #a0a8b0;
             --border: rgba(255, 255, 255, 0.1);
-            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -78,6 +77,7 @@
             overflow: hidden;
             aspect-ratio: 3/4;
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            background: #222;
         }
 
         .hero-image-container img {
@@ -131,15 +131,8 @@
             padding: 30px;
             border-radius: 20px;
             border: 1px solid var(--border);
-            transition: var(--transition);
             display: flex;
             flex-direction: column;
-        }
-
-        .service-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.03);
         }
 
         .service-card h3 {
@@ -158,10 +151,7 @@
             font-weight: 600;
         }
 
-        .service-card ul {
-            list-style: none;
-            margin-top: auto;
-        }
+        .service-card ul { list-style: none; margin-top: auto; }
 
         .service-card ul li {
             position: relative;
@@ -180,14 +170,12 @@
 
         .cta-section {
             background: linear-gradient(145deg, #1e2124, #141618);
-            padding: 60px;
+            padding: 60px 20px;
             border-radius: 30px;
             text-align: center;
             margin-bottom: 80px;
             border: 1px solid var(--border);
         }
-
-        .cta-section h2 { margin-bottom: 20px; font-family: 'Montserrat', sans-serif; }
 
         .btn-contact {
             display: inline-block;
@@ -198,21 +186,27 @@
             text-decoration: none;
             font-weight: 700;
             font-size: 1.1rem;
-            transition: var(--transition);
-            margin-top: 20px;
+            margin: 10px;
         }
 
-        .btn-contact:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        .messenger-btns {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        .email-link {
-            display: block;
-            margin-top: 20px;
-            color: var(--text-muted);
+        .btn-msgr {
+            padding: 12px 25px;
+            border-radius: 50px;
             text-decoration: none;
+            font-weight: 600;
+            color: #fff;
         }
+
+        .viber { background: #7360f2; }
+        .telegram { background: #0088cc; }
 
         footer {
             text-align: center;
@@ -227,16 +221,6 @@
             .hero-image-container { max-width: 400px; margin: 0 auto; }
             header { flex-direction: column; gap: 10px; }
         }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
     </style>
 </head>
 <body>
@@ -248,11 +232,11 @@
         </header>
 
         <section class="hero">
-            <div class="hero-image-container reveal">
-                <img src="karakanova-photo.JPG" alt="Адвокат Караканова Тетяна Володимирівна">
+            <div class="hero-image-container">
+                <img src="karakanova-photo.JPG" alt="Адвокат Караканова Тетяна">
             </div>
             
-            <div class="hero-content reveal">
+            <div class="hero-content">
                 <h1>Караканова<br>Тетяна Володимирівна</h1>
                 <p class="subtitle">Професійний захист ваших прав та інтересів</p>
                 
@@ -266,32 +250,75 @@
             </div>
         </section>
 
-        <h2 class="section-title reveal">У чому я допоможу</h2>
+        <h2 class="section-title">У чому я допоможу</h2>
         
         <div class="services-list-grid">
-            <div class="service-card reveal">
+            <div class="service-card">
                 <h3>Консультації та Майнові спори</h3>
-                <p class="main-desc">Глибокий аналіз вашої ситуації, правова оцінка ризиків та захист прав.</p>
+                <p class="main-desc">Глибокий аналіз вашої ситуації та захист прав.</p>
                 <ul>
                     <li>Повернення на роботу та стягнення зарплати.</li>
                     <li>Скасування документів про стягнення боргів.</li>
                     <li>Розбіжності щодо угод та контрактів.</li>
                     <li>Відшкодування шкоди (зокрема після ДТП).</li>
-                    <li>Захист від стягнення боргів.</li>
                 </ul>
             </div>
 
-            <div class="service-card reveal">
+            <div class="service-card">
                 <h3>Судовий захист та Сімейні питання</h3>
-                <p class="main-desc">Представництво інтересів у судах та вирішення сімейних спорів.</p>
+                <p class="main-desc">Представництво інтересів у судах.</p>
                 <ul>
                     <li>Розлучення та розподіл майна.</li>
-                    <li>Стягнення або зменшення суми аліментів.</li>
+                    <li>Стягнення або зміна суми аліментів.</li>
                     <li>Визначення місця проживання дитини.</li>
-                    <li>Оскарження батьківства / позбавлення прав.</li>
-                    <li>Цивільні та господарські справи.</li>
+                    <li>Оскарження батьківства.</li>
                 </ul>
             </div>
 
-            <div class="service-card reveal">
-                <h3>Супровід бі
+            <div class="service-card">
+                <h3>Супровід бізнесу та Держоргани</h3>
+                <p class="main-desc">Аудит та оскарження рішень влади.</p>
+                <ul>
+                    <li>Оскарження рішень Податкової служби.</li>
+                    <li>Спори з Пенсійним фондом.</li>
+                    <li>Правова допомога підприємцям.</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Адмінсправи та Порушення</h3>
+                <p class="main-desc">Захист у справах про адміністративні порушення.</p>
+                <ul>
+                    <li>Захист при звинуваченні за ст. 130 КУпАП.</li>
+                    <li>Порушення ПДР.</li>
+                    <li>Представництво в судах.</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Питання спадщини</h3>
+                <p class="main-desc">Оформлення спадкових прав.</p>
+                <ul>
+                    <li>Підтвердження родинних зв'язків.</li>
+                    <li>Відновлення термінів прийняття спадщини.</li>
+                    <li>Оформлення права власності.</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="cta-section">
+            <h2>Потрібна юридична допомога?</h2>
+            <p>Зв'яжіться зі мною зручним способом:</p>
+            <a href="tel:+380953905370" class="btn-contact">+38 095 390 53 70</a>
+            <div class="messenger-btns">
+                <a href="viber://chat?number=%2B380953905370" class="btn-msgr viber">Viber</a>
+                <a href="https://t.me/Tatiana_Karakanova" class="btn-msgr telegram">Telegram</a>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2026 Адвокат Караканова Т.В. Всі права захищені.
+        </footer>
+    </div>
+</body>
+</html>
