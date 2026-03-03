@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юридичні послуги — Адвокат Караканова Т.В.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --bg-dark: #0f1113; 
+            --bg-card: #1a1c1e; 
+            --accent: #d4af37; 
+            --text-main: #ffffff; 
+            --text-muted: #a0a8b0; 
+            --border: rgba(255, 255, 255, 0.1); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Source Sans 3', sans-serif; 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            line-height: 1.6; 
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        header { 
+            padding: 30px 0; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid var(--border); 
+        }
+
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 700; color: #fff; text-decoration: none; }
+        
+        nav { display: flex; gap: 25px; }
+        nav a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover, nav a.active { color: var(--accent); }
+
+        .content-section { padding: 60px 0; }
+        
+        .page-header { margin-bottom: 40px; }
+        .page-header h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; color: var(--accent); margin-bottom: 15px; }
+        .page-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 800px; }
+
+        .services-detailed { display: grid; gap: 25px; }
+        
+        .detail-card { 
+            background: var(--bg-card); 
+            padding: 35px; 
+            border-radius: 20px; 
+            border: 1px solid var(--border); 
+            transition: 0.3s;
+        }
+
+        .detail-card:hover { border-color: var(--accent); }
+
+        .detail-card h2 { 
+            font-family: 'Montserrat', sans-serif; 
+            color: var(--accent); 
+            margin-bottom: 15px; 
+            font-size: 1.6rem; 
+        }
+
+        .detail-card p { color: var(--text-main); font-size: 1.05rem; margin-bottom: 20px; }
+        
+        .feature-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; border-top: 1px solid var(--border); padding-top: 20px; }
+        .feature-list li { position: relative; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; }
+        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+
+        .back-link { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-weight: 600; border-bottom: 1px dashed var(--accent); }
+
+        footer { text-align: center; padding: 40px 0; color: var(--text-muted); border-top: 1px solid var(--border); margin-top: 60px; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2rem; }
+            .feature-list { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 15px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">КАРАКАНОВА Т.В.</a>
+            <nav>
+                <a href="index.html">Головна</a>
+                <a href="poslugy.html" class="active">Юридичні Послуги</a>
+            </nav>
+        </header>
+
+        <main class="content-section">
+            <div class="page-header">
+                <h1>Юридичні Послуги</h1>
+                <p>Кваліфікована допомога адвоката для захисту ваших прав та законних інтересів.</p>
+            </div>
+
+            <div class="services-detailed">
+                <div class="detail-card">
+                    <h2>Консультації</h2>
+                    <p>Допомагаю розібратися з правовими питаннями, перевіряю документи та планую ваші дії.</p>
+                    <ul class="feature-list">
+                        <li>Аналіз правової ситуації</li>
+                        <li>Перевірка договорів</li>
+                        <li>Підготовка юридичних висновків</li>
+                        <li>Розробка алгоритму дій</li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h2>Представництво в суді</h2>
+                    <p>Захищаю ваші інтереси в суді та відстоюю ваші права.</p>
+                    <ul class="feature-list">
+                        <li>Складання позовних заяв</li>
+                        <li>Участь у судових засіданнях</li>
+                        <li>Оскарження рішень</li>
