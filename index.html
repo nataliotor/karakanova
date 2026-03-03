@@ -9,11 +9,12 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
 
+    <link rel="canonical" href="https://advokat-karakanova-urist.cx.ua/">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nataliotor.github.io/karakanova/">
+    <meta property="og:url" content="https://advokat-karakanova-urist.cx.ua/">
     <meta property="og:title" content="Адвокат Караканова Тетяна Володимирівна">
     <meta property="og:description" content="Професійний юридичний захист та консультації у Дніпропетровській області. Свідоцтво №001215.">
-    <meta property="og:image" content="https://nataliotor.github.io/karakanova/karakanova-photo.JPG">
+    <meta property="og:image" content="https://advokat-karakanova-urist.cx.ua/karakanova-photo.JPG">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
     
@@ -21,7 +22,7 @@
         :root {
             --bg-dark: #0f1113;
             --bg-card: #1a1c1e;
-            --accent: #d4af37; /* Золотистий акцент для юридичної тематики */
+            --accent: #d4af37; 
             --text-main: #ffffff;
             --text-muted: #a0a8b0;
             --border: rgba(255, 255, 255, 0.1);
@@ -40,7 +41,6 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* --- Header --- */
         header {
             padding: 40px 0;
             display: flex;
@@ -64,7 +64,6 @@
             font-weight: 600;
         }
 
-        /* --- Hero Section --- */
         .hero {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -89,7 +88,7 @@
 
         .hero-content h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-size: clamp(2.3rem, 5vw, 3.5rem);
             line-height: 1.1;
             margin-bottom: 20px;
         }
@@ -101,7 +100,6 @@
             font-weight: 300;
         }
 
-        /* --- Stats/Info Box --- */
         .info-card {
             background: var(--bg-card);
             padding: 30px;
@@ -113,42 +111,68 @@
         .info-card p { margin-bottom: 10px; color: var(--text-muted); }
         .info-card strong { color: var(--text-main); }
 
-        /* --- Services --- */
         .section-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 40px;
+            font-size: 2.2rem;
+            margin: 60px 0 40px;
             text-align: center;
+            color: var(--accent);
         }
 
-        .services-grid {
+        .services-list-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
             margin-bottom: 80px;
         }
 
-        .service-item {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 40px;
+        .service-card {
+            background: var(--bg-card);
+            padding: 35px;
             border-radius: 20px;
             border: 1px solid var(--border);
             transition: var(--transition);
         }
 
-        .service-item:hover {
-            background: rgba(255, 255, 255, 0.07);
-            transform: translateY(-10px);
+        .service-card:hover {
             border-color: var(--accent);
+            transform: translateY(-5px);
         }
 
-        .service-item h3 {
+        .service-card h3 {
             font-family: 'Montserrat', sans-serif;
+            color: var(--accent);
             margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .service-card p.desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .service-card ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
             color: var(--accent);
         }
 
-        /* --- Contact Block --- */
         .cta-section {
             background: linear-gradient(145deg, #1e2124, #141618);
             padding: 60px;
@@ -193,14 +217,13 @@
             border-top: 1px solid var(--border);
         }
 
-        /* --- Адаптивність --- */
         @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; text-align: center; }
             .hero-image-container { max-width: 400px; margin: 0 auto; }
             header { flex-direction: column; gap: 10px; }
+            .services-list-grid { grid-template-columns: 1fr; }
         }
 
-        /* Анімація появи */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -239,20 +262,61 @@
             </div>
         </section>
 
-        <h2 class="section-title reveal">Напрямки діяльності</h2>
+        <h2 class="section-title reveal">У чому я допоможу</h2>
         
-        <div class="services-grid">
-            <div class="service-item reveal">
-                <h3>Консультації</h3>
-                <p>Глибокий аналіз вашої ситуації, правова оцінка ризиків, перевірка документів та розробка стратегії дій.</p>
+        <div class="services-list-grid">
+            <div class="service-card reveal">
+                <h3>Побутові та майнові спори</h3>
+                <p class="desc">Вирішення конфліктів, пов'язаних з майном та повсякденними справами.</p>
+                <ul>
+                    <li>Допомога у поверненні на роботу та стягнення зарплати.</li>
+                    <li>Скасування нотаріальних документів про стягнення боргів.</li>
+                    <li>Захист від стягнення боргів.</li>
+                    <li>Розбіжності щодо угод та контрактів.</li>
+                    <li>Відшкодування шкоди та збитків (зокрема після ДТП).</li>
+                </ul>
             </div>
-            <div class="service-item reveal">
-                <h3>Судовий захист</h3>
-                <p>Представництво інтересів у судах усіх інстанцій. Захист у цивільних, адміністративних та господарських справах.</p>
+
+            <div class="service-card reveal">
+                <h3>Сімейні питання</h3>
+                <p class="desc">Юридичний супровід найчутливіших життєвих моментів.</p>
+                <ul>
+                    <li>Розірвання шлюбу (розлучення).</li>
+                    <li>Стягнення аліментів на утримання дітей.</li>
+                    <li>Зменшення або зміна суми аліментів.</li>
+                    <li>Визначення місця проживання дитини.</li>
+                    <li>Оскарження батьківства або позбавлення прав.</li>
+                </ul>
             </div>
-            <div class="service-item reveal">
-                <h3>Супровід бізнесу</h3>
-                <p>Робота з договорами, юридичний аудит, взаємодія з державними органами та правова підтримка проектів.</p>
+
+            <div class="service-card reveal">
+                <h3>Спори з держустановами</h3>
+                <p class="desc">Захист від неправомірних дій органів влади.</p>
+                <ul>
+                    <li>Оскарження рішень Податкової служби.</li>
+                    <li>Спори з Пенсійним фондом України.</li>
+                    <li>Оскарження дій інших державних органів.</li>
+                </ul>
+            </div>
+
+            <div class="service-card reveal">
+                <h3>Захист у справах про порушення</h3>
+                <p class="desc">Адвокатський захист у судах при правопорушеннях.</p>
+                <ul>
+                    <li>Захист при звинуваченні у керуванні (ст. 130 КУпАП).</li>
+                    <li>Інші адміністративні правопорушення.</li>
+                    <li>Представництво інтересів у суді.</li>
+                </ul>
+            </div>
+
+            <div class="service-card reveal">
+                <h3>Питання спадщини</h3>
+                <p class="desc">Повний супровід оформлення спадкових прав.</p>
+                <ul>
+                    <li>Підтвердження родинних зв'язків.</li>
+                    <li>Відновлення термінів прийняття спадщини.</li>
+                    <li>Оформлення права власності на майно.</li>
+                </ul>
             </div>
         </div>
 
@@ -264,12 +328,15 @@
         </section>
 
         <footer>
-            &copy; 2024 Адвокат Караканова Т.В. Всі права захищені.
+            &copy; <span id="year"></span> Адвокат Караканова Т.В. Всі права захищені.
         </footer>
     </div>
 
     <script>
-        // Скрипт для появи елементів при скролі
+        // Рік у футері
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Анімація появи
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -283,10 +350,7 @@
         }
 
         window.addEventListener("scroll", reveal);
-        // Запустити один раз при завантаженні
-        reveal();
+        reveal(); // Запуск при старті
     </script>
 </body>
 </html>
-
-
