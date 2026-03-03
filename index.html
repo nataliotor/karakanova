@@ -5,320 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адвокат Дніпро — Караканова Тетяна — Юрист</title>
     <meta name="description" content="Адвокат Караканова Тетяна Володимирівна. Свідоцтво №001215. Професійна юридична допомога, захист у судах та консультації.">
-    
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-
     <link rel="canonical" href="https://advokat-karakanova-urist.cx.ua/">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://advokat-karakanova-urist.cx.ua/">
-    <meta property="og:title" content="Адвокат Караканова Тетяна Володимирівна">
-    <meta property="og:description" content="Професійний юридичний захист та консультації у Дніпропетровській області. Свідоцтво №001215.">
-    <meta property="og:image" content="https://advokat-karakanova-urist.cx.ua/karakanova-photo.JPG">
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
-    
     <style>
-        :root {
-            --bg-dark: #0f1113;
-            --bg-card: #1a1c1e;
-            --accent: #d4af37; 
-            --text-main: #ffffff;
-            --text-muted: #a0a8b0;
-            --border: rgba(255, 255, 255, 0.1);
-        }
-
+        :root { --bg-dark: #0f1113; --bg-card: #1a1c1e; --accent: #d4af37; --text-main: #ffffff; --text-muted: #a0a8b0; --border: rgba(255, 255, 255, 0.1); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
+        body { font-family: 'Source Sans 3', sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-        header {
-            padding: 40px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .status-badge {
-            font-size: 0.9rem;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
-            align-items: center;
-            padding: 80px 0;
-        }
-
-        .hero-image-container {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            aspect-ratio: 3/4;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            background: #222;
-        }
-
-        .hero-image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-content h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2.3rem, 5vw, 3.5rem);
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero-content .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent);
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-
-        .info-card {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid var(--border);
-            margin-bottom: 30px;
-        }
-
-        .info-card p { margin-bottom: 10px; color: var(--text-muted); }
-        .info-card strong { color: var(--text-main); }
-
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
-            margin: 60px 0 40px;
-            text-align: center;
-            color: var(--accent);
-        }
-
-        .services-list-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-bottom: 80px;
-        }
-
-        .service-card {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .service-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--accent);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
-        }
-
-        .service-card p.main-desc {
-            font-size: 1rem;
-            color: var(--text-main);
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .service-card ul { list-style: none; margin-top: auto; }
-
-        .service-card ul li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .service-card ul li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        .cta-section {
-            background: linear-gradient(145deg, #1e2124, #141618);
-            padding: 60px 20px;
-            border-radius: 30px;
-            text-align: center;
-            margin-bottom: 80px;
-            border: 1px solid var(--border);
-        }
-
-        .btn-contact {
-            display: inline-block;
-            background: var(--accent);
-            color: #000;
-            padding: 18px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin: 10px;
-        }
-
-        .messenger-btns {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn-msgr {
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            color: #fff;
-        }
-
+        header { padding: 40px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; }
+        .status-badge { font-size: 0.9rem; color: var(--accent); text-transform: uppercase; font-weight: 600; }
+        .hero { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; padding: 80px 0; }
+        .hero-image-container { border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; background: #222; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .hero-image-container img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-content h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.3rem, 5vw, 3.5rem); margin-bottom: 20px; }
+        .subtitle { font-size: 1.2rem; color: var(--accent); margin-bottom: 30px; }
+        .info-card { background: var(--bg-card); padding: 30px; border-radius: 15px; border: 1px solid var(--border); margin-bottom: 30px; }
+        .section-title { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; margin: 60px 0 40px; text-align: center; color: var(--accent); }
+        .services-list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 80px; }
+        .service-card { background: var(--bg-card); padding: 30px; border-radius: 20px; border: 1px solid var(--border); }
+        .service-card h3 { color: var(--accent); margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        .service-card ul { list-style: none; margin-top: 15px; }
+        .service-card ul li { position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 0.95rem; color: var(--text-muted); }
+        .service-card ul li::before { content: "•"; position: absolute; left: 0; color: var(--accent); }
+        .cta-section { background: linear-gradient(145deg, #1e2124, #141618); padding: 60px 20px; border-radius: 30px; text-align: center; margin-bottom: 80px; border: 1px solid var(--border); }
+        .btn-contact { display: inline-block; background: var(--accent); color: #000; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; margin: 10px; font-size: 1.1rem; }
+        .messenger-btns { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn-msgr { padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; color: #fff; }
         .viber { background: #7360f2; }
         .telegram { background: #0088cc; }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border);
-        }
-
-        @media (max-width: 900px) {
-            .hero { grid-template-columns: 1fr; text-align: center; }
-            .hero-image-container { max-width: 400px; margin: 0 auto; }
-            header { flex-direction: column; gap: 10px; }
-        }
+        .email-link { display: block; margin-top: 30px; color: var(--text-muted); text-decoration: none; transition: 0.3s; }
+        .email-link:hover { color: var(--accent); }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--border); font-size: 0.8rem; }
+        @media (max-width: 900px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-image-container { max-width: 400px; margin: 0 auto; } }
     </style>
 </head>
 <body>
-
     <div class="container">
         <header>
             <div class="logo">КАРАКАНОВА Т.В.</div>
             <div class="status-badge">Адвокат Дніпропетровської області</div>
         </header>
-
         <section class="hero">
-            <div class="hero-image-container">
-                <img src="karakanova-photo.JPG" alt="Адвокат Караканова Тетяна">
-            </div>
-            
+            <div class="hero-image-container"><img src="karakanova-photo.JPG" alt="Адвокат Караканова Тетяна"></div>
             <div class="hero-content">
                 <h1>Караканова<br>Тетяна Володимирівна</h1>
                 <p class="subtitle">Професійний захист ваших прав та інтересів</p>
-                
                 <div class="info-card">
                     <p><strong>Свідоцтво:</strong> №001215 від 14.10.2019</p>
                     <p><strong>Досвід:</strong> Кваліфікована юридична допомога</p>
                     <p><strong>Локація:</strong> Дніпропетровська область / Дистанційно</p>
                 </div>
-
                 <a href="tel:+380953905370" class="btn-contact">Зателефонувати фахівцю</a>
             </div>
         </section>
-
         <h2 class="section-title">У чому я допоможу</h2>
-        
         <div class="services-list-grid">
-            <div class="service-card">
-                <h3>Консультації та Майнові спори</h3>
-                <p class="main-desc">Глибокий аналіз вашої ситуації та захист прав.</p>
-                <ul>
-                    <li>Повернення на роботу та стягнення зарплати.</li>
-                    <li>Скасування документів про стягнення боргів.</li>
-                    <li>Розбіжності щодо угод та контрактів.</li>
-                    <li>Відшкодування шкоди (зокрема після ДТП).</li>
-                </ul>
-            </div>
-
-            <div class="service-card">
-                <h3>Судовий захист та Сімейні питання</h3>
-                <p class="main-desc">Представництво інтересів у судах.</p>
-                <ul>
-                    <li>Розлучення та розподіл майна.</li>
-                    <li>Стягнення або зміна суми аліментів.</li>
-                    <li>Визначення місця проживання дитини.</li>
-                    <li>Оскарження батьківства.</li>
-                </ul>
-            </div>
-
-            <div class="service-card">
-                <h3>Супровід бізнесу та Держоргани</h3>
-                <p class="main-desc">Аудит та оскарження рішень влади.</p>
-                <ul>
-                    <li>Оскарження рішень Податкової служби.</li>
-                    <li>Спори з Пенсійним фондом.</li>
-                    <li>Правова допомога підприємцям.</li>
-                </ul>
-            </div>
-
-            <div class="service-card">
-                <h3>Адмінсправи та Порушення</h3>
-                <p class="main-desc">Захист у справах про адміністративні порушення.</p>
-                <ul>
-                    <li>Захист при звинуваченні за ст. 130 КУпАП.</li>
-                    <li>Порушення ПДР.</li>
-                    <li>Представництво в судах.</li>
-                </ul>
-            </div>
-
-            <div class="service-card">
-                <h3>Питання спадщини</h3>
-                <p class="main-desc">Оформлення спадкових прав.</p>
-                <ul>
-                    <li>Підтвердження родинних зв'язків.</li>
-                    <li>Відновлення термінів прийняття спадщини.</li>
-                    <li>Оформлення права власності.</li>
-                </ul>
-            </div>
+            <div class="service-card"><h3>Консультації та Майнові спори</h3><ul><li>Повернення на роботу</li><li>Стягнення зарплати</li><li>Скасування боргів</li><li>Відшкодування після ДТП</li></ul></div>
+            <div class="service-card"><h3>Сімейні питання</h3><ul><li>Розлучення та розподіл майна</li><li>Стягнення аліментів</li><li>Місце проживання дитини</li><li>Оскарження батьківства</li></ul></div>
+            <div class="service-card"><h3>Супровід бізнесу</h3><ul><li>Оскарження рішень Податкової</li><li>Спори з Пенсійним фондом</li><li>Допомога підприємцям</li></ul></div>
+            <div class="service-card"><h3>Адмінсправи</h3><ul><li>Захист за ст. 130 КУпАП</li><li>Порушення ПДР</li><li>Представництво в судах</li></ul></div>
+            <div class="service-card"><h3>Питання спадщини</h3><ul><li>Родинні зв'язки</li><li>Відновлення термінів</li><li>Оформлення власності</li></ul></div>
         </div>
-
         <section class="cta-section">
-            <h2>Потрібна юридична допомога?</h2>
-            <p>Зв'яжіться зі мною зручним способом:</p>
+            <h2>Зв'язатися зі мною</h2>
             <a href="tel:+380953905370" class="btn-contact">+38 095 390 53 70</a>
             <div class="messenger-btns">
                 <a href="viber://chat?number=%2B380953905370" class="btn-msgr viber">Viber</a>
                 <a href="https://t.me/Tatiana_Karakanova" class="btn-msgr telegram">Telegram</a>
             </div>
+            <a href="mailto:3223618261@i.ua" class="email-link">3223618261@i.ua</a>
         </section>
-
-        <footer>
-            &copy; 2026 Адвокат Караканова Т.В. Всі права захищені.
-        </footer>
+        <footer>&copy; 2026 Адвокат Караканова Т.В. Всі права захищені.</footer>
     </div>
 </body>
 </html>
