@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Юридичні послуги в Дніпрі — Адвокат Караканова Т.В.</title>
-    <meta name="description" content="Повний спектр юридичних послуг адвоката Караканової Т.В. у Дніпрі.">
+    <meta name="description" content="Повний спектр юридичних послуг: сімейні справи, розлучення, аліменти, ДТП, ст. 130 КУпАП, спадщина та майнові спори у Дніпрі.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -16,52 +17,92 @@
             --text-muted: #a0a8b0; 
             --border: rgba(255, 255, 255, 0.1); 
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Source Sans 3', sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
-        header { padding: 30px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
-        nav { display: flex; gap: 20px; }
-        nav a { color: var(--text-main); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
-        nav a:hover { color: var(--accent); }
-        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 700; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Source Sans 3', sans-serif; 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            line-height: 1.6; 
+        }
 
-        .services-header { text-align: center; padding: 40px 0; }
-        .services-header h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; color: var(--accent); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        header { 
+            padding: 30px 0; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid var(--border); 
+        }
+
+        nav { display: flex; gap: 20px; }
+        nav a { 
+            color: var(--text-main); 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+            text-transform: uppercase; 
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--accent); }
+
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; }
+
+        .section-title { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 2.5rem; 
+            margin: 60px 0 40px; 
+            text-align: center; 
+            color: var(--accent); 
+        }
 
         /* МАКЕТ З КАРТИНКОЮ ПРАВОРУЧ */
-        .main-layout {
+        .services-layout {
             display: grid;
-            grid-template-columns: 1fr 350px;
+            grid-template-columns: 1fr 380px;
             gap: 30px;
-            margin-bottom: 60px;
+            margin-bottom: 80px;
             align-items: start;
         }
 
-        .detailed-services { display: grid; gap: 20px; }
-        .service-item { background: var(--bg-card); padding: 30px; border-radius: 15px; border: 1px solid var(--border); }
-        .service-item h2 { font-family: 'Montserrat', sans-serif; color: var(--accent); margin-bottom: 15px; font-size: 1.5rem; }
-        .service-list { list-style: none; color: var(--text-muted); }
-        .service-list li { position: relative; padding-left: 25px; margin-bottom: 5px; }
-        .service-list li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); }
+        .services-grid-inner {
+            display: grid;
+            gap: 20px;
+        }
 
-        /* БЛОК ДЛЯ ВАШОЇ КАРТИНКИ */
-        .image-sidebar {
-            position: sticky;
-            top: 20px;
+        .service-card { 
+            background: var(--bg-card); 
+            padding: 30px; 
+            border-radius: 20px; 
+            border: 1px solid var(--border); 
+        }
+
+        .service-card h2 { color: var(--accent); margin-bottom: 15px; font-family: 'Montserrat', sans-serif; font-size: 1.6rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        .service-card p { color: var(--text-muted); margin-bottom: 15px; }
+        .service-card ul { list-style: none; }
+        .service-card ul li { position: relative; padding-left: 25px; margin-bottom: 8px; color: var(--text-main); }
+        .service-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+
+        /* ВАШІ ВАГИ ПРАВОРУЧ */
+        .side-image-container {
             border-radius: 20px;
             overflow: hidden;
+            position: sticky;
+            top: 20px;
             border: 1px solid var(--border);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
-        .image-sidebar img { width: 100%; height: auto; display: block; }
 
-        footer { text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--border); }
+        .side-image-container img { width: 100%; height: auto; display: block; object-fit: cover; }
 
-        @media (max-width: 900px) {
-            .main-layout { grid-template-columns: 1fr; }
-            .image-sidebar { order: -1; max-width: 500px; margin: 0 auto 30px; }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--border); font-size: 0.8rem; }
+
+        @media (max-width: 1000px) {
             header { flex-direction: column; gap: 15px; }
+            .services-layout { grid-template-columns: 1fr; }
+            .side-image-container { display: none; } /* Сховаємо на мобільних, щоб не заважало тексту */
         }
     </style>
 </head>
@@ -76,51 +117,56 @@
             </nav>
         </header>
 
-        <section class="services-header">
-            <h1>Повний спектр послуг</h1>
-        </section>
+        <h1 class="section-title">Юридичні послуги</h1>
 
-        <div class="main-layout">
-            <div class="detailed-services">
-                <div class="service-item">
-                    <h2>Сімейне право</h2>
-                    <ul class="service-list">
-                        <li>Розлучення та аліменти</li>
-                        <li>Поділ майна</li>
-                        <li>Визначення місця проживання дитини</li>
+        <div class="services-layout">
+            <div class="services-grid-inner">
+                
+                <div class="service-card">
+                    <h2>Сімейні справи</h2>
+                    <p>Професійне вирішення конфліктів у сфері сімейних відносин з урахуванням інтересів усіх сторін.</p>
+                    <ul>
+                        <li>Супровід розлучення в судовому порядку</li>
+                        <li>Стягнення аліментів та додаткових витрат на дитину</li>
+                        <li>Розподіл нерухомості та спільного майна подружжя</li>
+                        <li>Позбавлення батьківських прав та опіка</li>
                     </ul>
                 </div>
 
-                <div class="service-item">
-                    <h2>Майнові та цивільні спори</h2>
-                    <ul class="service-list">
-                        <li>Відшкодування після ДТП</li>
-                        <li>Стягнення боргів</li>
-                        <li>Трудові конфлікти</li>
+                <div class="service-card">
+                    <h2>Адмінсправи та ДТП</h2>
+                    <p>Ефективний захист водіїв та оскарження рішень правоохоронних органів.</p>
+                    <ul>
+                        <li>Захист у суді по ст. 130 КУпАП (алкогольне сп'яніння)</li>
+                        <li>Оскарження незаконних штрафів ПДР</li>
+                        <li>Відшкодування матеріальних збитків після ДТП</li>
                     </ul>
                 </div>
 
-                <div class="service-item">
-                    <h2>Адміністративні справи</h2>
-                    <ul class="service-list">
-                        <li>Захист водіїв (ст. 130 КУпАП)</li>
-                        <li>Оскарження штрафів</li>
-                        <li>Спори з держорганами</li>
+                <div class="service-card">
+                    <h2>Майнові та трудові спори</h2>
+                    <p>Захист ваших прав у відносинах з роботодавцями, банками та державними установами.</p>
+                    <ul>
+                        <li>Поновлення на роботі та стягнення зарплати</li>
+                        <li>Скасування незаконних боргів</li>
+                        <li>Спори з Пенсійним фондом та Податковою</li>
                     </ul>
                 </div>
 
-                <div class="service-item">
-                    <h2>Спадщина</h2>
-                    <ul class="service-list">
-                        <li>Оформлення через суд</li>
-                        <li>Поновлення строків</li>
-                        <li>Оскарження заповітів</li>
+                <div class="service-card">
+                    <h2>Спадкове право</h2>
+                    <p>Допомога в отриманні спадщини навіть у найскладніших ситуаціях.</p>
+                    <ul>
+                        <li>Відновлення термінів прийняття спадщини</li>
+                        <li>Встановлення фактів родинних зв'язків у судовому порядку</li>
+                        <li>Визнання права власності на спадкове майно</li>
                     </ul>
                 </div>
+
             </div>
 
-            <div class="image-sidebar">
-                <img src="services-side.jpg" alt="Адвокат Дніпро - ваги правосуддя">
+            <div class="side-image-container">
+                <img src="services-side.jpg" alt="Адвокат Дніпро — ваги та прапор">
             </div>
         </div>
 
